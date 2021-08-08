@@ -96,7 +96,7 @@ function SignUp() {
 					</button>
 				</form>
 				<p className="mt-2 text-sm font-semibold font-Quicksand text-coklat-muda text-opacity-80">
-					Jika sudah Register bisa<span className="text-coklat-muda underline relative z-40  mx-2"><Link to="/login">Login</Link></span>
+					Jika sudah Register bisa<span className="text-coklat-muda underline relative z-40 mx-2"><Link to="/login">Login</Link></span>
 				</p>
 			</div>
 			<FrameBottom color="#916529"/>

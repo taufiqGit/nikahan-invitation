@@ -14,7 +14,7 @@ function MainPage(argument) {
 
 	useEffect(()=>{
 		if (user === undefined) {
-			history.push('/login')
+			history.push('/signup')
 		}
 	}, [])
 

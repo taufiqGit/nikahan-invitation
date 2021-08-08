@@ -25,7 +25,7 @@ const Invitation = ()=>{
   
 	useEffect(() => {
 		if (user === undefined) {
-			history.push("/login")
+			history.push("/signup")
 			return
 		}
 		audio.play()

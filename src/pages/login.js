@@ -47,7 +47,7 @@ function Login(argument) {
 				{error && <ErrorEmailTerdaftar message={error}/>}
 				<form onSubmit={handleSubmit(onSubmit)}>
 					<div className="overflow-x-hidden my-2">
-						<input className="px-2 py-1 mt-1 text-coklat-muda placeholder-coklat-muda border-coklat-muda placeholder-opacity-50 rounded w-full font-semibold focus:outline-none border-2" 
+						<input className="px-2 py-1 mt-1 text-sm text-coklat-muda placeholder-coklat-muda border-coklat-muda placeholder-opacity-50 rounded w-full font-semibold focus:outline-none border-2" 
 						{...register("email", { required: true })}
 						type="number"
 						placeholder="No HP"
@@ -55,7 +55,7 @@ function Login(argument) {
 						{errors.email ? "email required" : ''}
 					</div>
 					<div className="overflow-x-hidden my-2">
-						<input className="px-2 py-1 mt-1 text-coklat-muda placeholder-coklat-muda border-coklat-muda placeholder-opacity-50 rounded w-full font-semibold focus:outline-none border-2" 
+						<input className="px-2 py-1 mt-1 text-sm text-coklat-muda placeholder-coklat-muda border-coklat-muda placeholder-opacity-50 rounded w-full font-semibold focus:outline-none border-2" 
 						{...register("password", { required: true })}
 						type="password"
 						placeholder='Password'

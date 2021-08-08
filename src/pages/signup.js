@@ -60,7 +60,7 @@ function SignUp() {
 				{error && <ErrorEmailTerdaftar message={error}/>}
 				<form onSubmit={handleSubmit(onSubmit)}>
 					<div className="overflow-x-hidden my-2 font-Quicksand">
-						<input className="px-2 py-1 mt-1 text-coklat-muda placeholder-coklat-muda border-coklat-muda placeholder-opacity-50 rounded w-full font-semibold focus:outline-none border-2" 
+						<input className="px-2 py-1 mt-1 text-sm text-coklat-muda placeholder-coklat-muda border-coklat-muda placeholder-opacity-50 rounded w-full font-semibold focus:outline-none border-2" 
 						{...register("fullname", { required: true })}
 						type="text"
 						placeholder="Nama Lengkap"
@@ -68,7 +68,7 @@ function SignUp() {
 						{errors.fullname ? "name required" : ''}
 					</div>
 					<div className="overflow-x-hidden my-2">
-						<input className="px-2 py-1 mt-1 text-coklat-muda placeholder-coklat-muda border-coklat-muda placeholder-opacity-50 rounded w-full font-semibold focus:outline-none border-2" 
+						<input className="px-2 py-1 mt-1 text-sm text-coklat-muda placeholder-coklat-muda border-coklat-muda placeholder-opacity-50 rounded w-full font-semibold focus:outline-none border-2" 
 						{...register("email", { required: true })}
 						type="number"
 						placeholder="No HP"
@@ -76,7 +76,7 @@ function SignUp() {
 						{errors.email ? "email required" : ''}
 					</div>
 					<div className="overflow-x-hidden my-2">
-						<input className="px-2 py-1 mt-1 text-coklat-muda placeholder-coklat-muda border-coklat-muda placeholder-opacity-50 rounded w-full font-semibold focus:outline-none border-2" 
+						<input className="px-2 py-1 mt-1 text-sm text-coklat-muda placeholder-coklat-muda border-coklat-muda placeholder-opacity-50 rounded w-full font-semibold focus:outline-none border-2" 
 						{...register("address", { required: true })}
 						type="text"
 						placeholder="Kota Asal"
@@ -84,7 +84,7 @@ function SignUp() {
 						{errors.address ? "address required" : ''}
 					</div>
 					<div className="overflow-x-hidden my-2">
-						<input className="px-2 py-1 mt-1 text-coklat-muda placeholder-coklat-muda border-coklat-muda placeholder-opacity-50 rounded w-full font-semibold focus:outline-none border-2" 
+						<input className="px-2 py-1 mt-1 text-sm text-coklat-muda placeholder-coklat-muda border-coklat-muda placeholder-opacity-50 rounded w-full font-semibold focus:outline-none border-2" 
 						{...register("password", { required: true })}
 						type="password"
 						placeholder='Password'

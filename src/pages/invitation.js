@@ -1,16 +1,17 @@
-import { useState, useEffect } from "react"
+import React, { useState, useEffect, Suspense } from "react"
 import { useHistory } from "react-router-dom"
 import { useAuthContext } from "../context/AuthContext"
-
+import Load from "../components/load"
 import NavBottom from '../components/nav_bottom'
-import Sampul from "../components/view-slide/sampul"
-import Mempelai from "../components/view-slide/mempelai"
-import Acara from "../components/view-slide/acara"
-import Lokasi from "../components/view-slide/lokasi"
-import Gallery from "../components/view-slide/gallery"
-import Prokes from "../components/view-slide/prokes"
-import Ucapan from "../components/view-slide/ucapan"
-import Penutup from "../components/view-slide/penutup"
+
+const Mempelai = React.lazy(() => import('../components/view-slide/mempelai'))
+const Sampul = React.lazy(() => import("../components/view-slide/sampul"))
+const Acara = React.lazy(() => import("../components/view-slide/acara"))
+const Lokasi = React.lazy(() => import("../components/view-slide/lokasi"))
+const Gallery = React.lazy(() => import("../components/view-slide/gallery"))
+const Prokes = React.lazy(() => import("../components/view-slide/prokes"))
+const Ucapan = React.lazy(() => import("../components/view-slide/ucapan"))
+const Penutup = React.lazy(() => import("../components/view-slide/penutup"))
 
 const URL_MUSIC = "https://api-wedding-sugidev.herokuapp.com/static/music/lagu_invitation.mp3"
 
@@ -35,14 +36,46 @@ const Invitation = ()=>{
 
  	return(
 			<div className="w-full h-full relative">
-				{ view === 'Sampul' && <Sampul/> }
-				{ view === 'Mempelai' && <Mempelai/> }
-				{ view === 'Acara' && <Acara/> }
-				{ view === 'Lokasi' && <Lokasi/> }
-				{ view === 'Gallery' && <Gallery/> }
-				{ view === 'Prokes' && <Prokes/> }
-				{ view === 'Ucapan' && <Ucapan/> }
-				{ view === 'Penutup' && <Penutup/> }
+				{ view === 'Sampul' && (
+					<Suspense fallback={<Load/>}>
+						<Sampul/>
+					</Suspense>
+				) }
+				{ view === 'Mempelai' && (
+					<Suspense fallback={<Load/>}>
+						<Mempelai/>
+					</Suspense>
+				) }
+				{ view === 'Acara' && (
+					<Suspense fallback={<Load/>}>
+						<Acara/>
+					</Suspense>
+				) }
+				{ view === 'Lokasi' && (
+					<Suspense fallback={<Load/>}>
+						<Lokasi/>
+					</Suspense>
+				) }
+				{ view === 'Gallery' && (
+					<Suspense fallback={<Load/>}>
+						<Gallery/>
+					</Suspense>
+				) }
+				{ view === 'Prokes' && (
+					<Suspense fallback={<Load/>}>
+						<Prokes/>
+					</Suspense>
+				) }
+				{ view === 'Ucapan' && (
+					<Suspense fallback={<Load/>}>
+						<Ucapan/>
+					</Suspense>
+				) }
+				{ view === 'Penutup' && (
+					<Suspense fallback={<Load/>}>
+						<Penutup/>
+					</Suspense>
+				) }
 				<NavBottom action_nav={(e) => setView(e)}/>
 			</div>
  		)

@@ -3,6 +3,7 @@ import {
   Switch,
   Route
 } from "react-router-dom"
+
 import MainPage from "./pages/main.js"
 import Invitation from "./pages/invitation"
 import SignUp from "./pages/signup.js"
@@ -14,7 +15,7 @@ function App() {
   return (
     <AuthContextWrap>
       <Router>
-      <div className="max-w-sm mx-auto h-screen">
+      <main className="max-w-sm mx-auto h-screen">
         <Switch>
             <Route path="/invitation">
               <Invitation/>
@@ -30,7 +31,7 @@ function App() {
             </Route>
             <Route component={NotFound}/>
         </Switch>
-      </div>
+      </main>
       </Router>
     </AuthContextWrap>
   );

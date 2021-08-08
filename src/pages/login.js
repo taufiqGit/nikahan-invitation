@@ -71,7 +71,7 @@ function Login(argument) {
 				</p>
 			</div>
 			<FrameBottom color="#916529"/>
-		</div>
+		</div> 
 	)
 }
 

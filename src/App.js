@@ -8,6 +8,7 @@ import Invitation from "./pages/invitation"
 import SignUp from "./pages/signup.js"
 import Login from "./pages/login.js" 
 import { AuthContextWrap } from "./context/AuthContext.js"
+import NotFound from "./components/404.js"
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
             <Route exact path="/">
               <MainPage/>
             </Route>
+            <Route component={NotFound}/>
         </Switch>
       </div>
       </Router>

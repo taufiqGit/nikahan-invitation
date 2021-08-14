@@ -52,7 +52,7 @@ function Login(argument) {
 						type="number"
 						placeholder="No HP"
 						/>
-						{errors.email ? "email required" : ''}
+						{errors.email ? (<p className="text-coklat-tua text-sm font-semibold">Nama Lengkap Wajib Diisi</p>) : ''}
 					</div>
 					<div className="overflow-x-hidden my-2">
 						<input className="px-2 py-1 mt-1 text-sm text-coklat-muda placeholder-coklat-muda border-coklat-muda placeholder-opacity-50 rounded w-full font-semibold focus:outline-none border-2" 
@@ -60,7 +60,7 @@ function Login(argument) {
 						type="password"
 						placeholder='Password'
 						/>
-						{errors.password ? "password required" : ''}
+						{errors.password ? (<p className="text-coklat-tua text-sm font-semibold">Password Wajib Diisi</p>) : ''}
 					</div>
 					<button className="w-full bg-coklat-muda font-Quicksand text-white font-semibold py-1.5 mt-2 rounded" type="submit">
 						Login
